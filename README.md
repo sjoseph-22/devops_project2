@@ -1,4 +1,4 @@
-# Docker-Java-kubernetes-project
+# Devops project using Docker and Kubernetes
 
 This project demonstrates a complete CI/CD and Orchestration workflow for a Java-based microservices application. It covers the end-to-end process of provisioning an AWS EC2 environment, containerizing three distinct microservices (Shopfront, Product Catalogue, and Stock Manager) using Docker, and deploying them to a local Kubernetes cluster via Minikube. The project concludes with viewing the Kubernetes Dashboard for real-time monitoring and management.
 
