@@ -49,20 +49,20 @@ Step 6: Clone Git repo
 
 Step 7: 
 
-* cd shopfront/
-* mvn clean install -DskipTests
-* docker build -t sjoseph22/shopfront:latest .
-* docker push sjoseph22/shopfront:latest
-
-* cd productcatalogue/
-* mvn clean install -DskipTests
-* docker build -t sjoseph22/productcatalogue:latest .
-* docker push sjoseph22/productcatalogue:latest
-
-* cd stockmanager/
-* mvn clean install -DskipTests
-* docker build -t sjoseph22/stockmanager:latest .
-* docker push sjoseph22/stockmanager:latest
+- cd shopfront/
+- mvn clean install -DskipTests
+- docker build -t sjoseph22/shopfront:latest .
+- docker push sjoseph22/shopfront:lates
+<br>
+- cd productcatalogue/
+- mvn clean install -DskipTests
+- docker build -t sjoseph22/productcatalogue:latest .
+- docker push sjoseph22/productcatalogue:latest
+<br>
+- cd stockmanager/
+- mvn clean install -DskipTests
+- docker build -t sjoseph22/stockmanager:latest .
+- docker push sjoseph22/stockmanager:latest
 
 
 
