@@ -1,6 +1,8 @@
 # Docker-Java-kubernetes-project
 
-## Step 1: Create AWS EC2 instance
+This project demonstrates a complete CI/CD and Orchestration workflow for a Java-based microservices application. It covers the end-to-end process of provisioning an AWS EC2 environment, containerizing three distinct microservices (Shopfront, Product Catalogue, and Stock Manager) using Docker, and deploying them to a local Kubernetes cluster via Minikube. The project concludes with viewing the Kubernetes Dashboard for real-time monitoring and management.
+
+## Step 1: Create the AWS EC2 Instance
 
 - EC2 type: Amazon Linux, m7i-flex-large
 - EBS volume: 30GB
@@ -47,7 +49,9 @@
 
 <img width="946" height="412" alt="git-repo-clone" src="https://github.com/user-attachments/assets/ed5e8d72-6a63-4eb0-948e-39a85430cf44" />
 
-## Step 7: 
+## Step 7: Build Maven Artifacts and Push Docker Images
+
+(You need to create your dockerhub id and put your id in each Dockerfile)
 
 - cd git_repo/shopfront/
 - mvn clean install -DskipTests
@@ -69,7 +73,7 @@
 <img width="947" height="443" alt="dockerhub-repo" src="https://github.com/user-attachments/assets/d2b56ca6-3071-460f-8478-0311e4d5fdd0" />
 
 
-## Step 8: 
+## Step 8: Deploy Services to Kubernetes and Initialize Dashboard
 
 - cd git_repo/kubernetes
 - kubectl apply -f shopfront-service.yaml
@@ -82,7 +86,7 @@
 
 <img width="949" height="409" alt="kubectl-dashboard-url" src="https://github.com/user-attachments/assets/5a34bb1d-9b01-43a9-b2b5-c4c8df4d406a" />
 
-## Step 9:
+## Step 9: Configure the Kubernetes API Proxy
 
 - kubectl proxy --address='0.0.0.0' --accept-hosts='^*$'
 
@@ -96,7 +100,7 @@ Source: Anywhere-IPv4
 
 <img width="1918" height="882" alt="image" src="https://github.com/user-attachments/assets/4167acd8-18a0-4830-a691-6dd1a95d9140" />
 
-## Step 11: Kubernetes dashboard
+## Step 11: Access the Remote Kubernetes Dashboard
 
 View kubernetes dashboard using the link:
 - http://(EC2-IP):8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/pod?namespace=default
